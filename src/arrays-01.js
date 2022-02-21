@@ -24,7 +24,8 @@
  * ? https://bit.ly/3EUI0j9 - Reading and Writing Array Elements
  */
 function getFirstValue(arr) {
-  // write your code here & return value
+  const first = arr[0];
+  return first;
 }
 
 /**
@@ -36,7 +37,8 @@ function getFirstValue(arr) {
  * @returns {array} - array of the 4 elements
  */
 function makeArray(a, b, c, d) {
-  // write your code here & return value
+  const array = [a, b, c, d];
+  return array;
 }
 
 /**
@@ -47,7 +49,14 @@ function makeArray(a, b, c, d) {
  *
  */
 function createFirstFivePrimes() {
-  // write your code here & return value
+  const array = [];
+  array[0] = 2;
+  array[1] = 3;
+  array[2] = 5;
+  array[3] = 7;
+  array[4] = 11;
+
+  return array;
 }
 /**
  * Creates a new array with a number of elements
@@ -58,7 +67,12 @@ function createFirstFivePrimes() {
  * ? must use a for loop
  */
 function createSizedArray(size) {
-  // write your code here & return value
+  const array = [];
+  array.length = size;
+  for (let i = 0; i < array.length; i += 1) {
+    array[i] = i;
+  }
+  return array;
 }
 
 /**
@@ -69,7 +83,9 @@ function createSizedArray(size) {
  * ? https://bit.ly/39z4FTE - Adding and Deleting Array Elements
  */
 function modifyArrayByAdding(arr) {
-  // write your code here & return value
+  arr.unshift(1);
+  arr.push(1);
+  return arr;
 }
 
 /**
@@ -79,7 +95,9 @@ function modifyArrayByAdding(arr) {
  * ? example: [1, 2, 3, 4, 5] => [2, 3, 4]
  */
 function modifyArrayByDeleting(arr) {
-  // write your code here & return value
+  arr.shift();
+  arr.pop();
+  return arr;
 }
 
 /**
@@ -90,7 +108,8 @@ function modifyArrayByDeleting(arr) {
  * ? example: [1, 2, 3, 4, 5], index = 2 => 3
  */
 function findElementAtIndex(arr, index) {
-  // write your code here & return value
+  const element = arr[index];
+  return element;
 }
 
 /**
@@ -102,7 +121,8 @@ function findElementAtIndex(arr, index) {
  * ? hint: https://bit.ly/2ZyFaAj - Array Searching and Sorting Methods
  */
 function findElementByValue(arr, value) {
-  // write your code here & return value
+  const index = arr.indexOf(value);
+  return index;
 }
 
 /**
@@ -114,7 +134,8 @@ function findElementByValue(arr, value) {
  * ? example: [1, 2, 3, 4, 5], index = 2, value = 0 => [1, 2, 0, 4, 5]
  */
 function changeElementAtIndex(arr, index, value) {
-  // write your code here & return value
+  arr[index] = value;
+  return arr;
 }
 
 /**
@@ -125,7 +146,11 @@ function changeElementAtIndex(arr, index, value) {
  * ? https://mzl.la/3ib7Dm3
  */
 function makeStringFromArray(arr) {
-  // write your code here & return value
+  let string = '';
+  for (let i = 0; i < arr.length; i += 1) {
+    string += arr[i];
+  }
+  return string;
 }
 
 /**
@@ -136,7 +161,11 @@ function makeStringFromArray(arr) {
  * ? https://bit.ly/39ASLc0 - The spread operator
  */
 function createShallowCopy(arr) {
-  // write your code here & return value
+  const arrCopy = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    arrCopy[i] = arr[i];
+  }
+  return arrCopy;
 }
 
 module.exports = {
